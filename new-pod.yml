@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: default
+  labels:
+    app: nginx
+spec:
+  nodeSelector:
+    kubernetes.azure.com/agentpool: newagent01 # Specify the node pool as label and selector
+  containers:
+  - name: nginx-container
+    image: nginx
+    ports:
+        - containerPort: 80
