@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: deployment-container
-        image: nginx:latest
+        image: ollama/ollama
         ports:
-        - containerPort: 80
+        - containerPort: 11434
